@@ -15,6 +15,7 @@ Number=N;
 
 }
 
+// ==> Doesn't matter what you are working on
 
 
 };
@@ -28,7 +29,7 @@ int Number;
 	cin>>Number;
 	 Fib trial(Number);
 	
-	
+	 
 	trial.math_process();
 
 	getch();
