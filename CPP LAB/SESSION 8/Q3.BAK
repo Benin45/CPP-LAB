@@ -12,7 +12,7 @@ Use object array to input details of 5 books.
 
 #include <iostream.h>
 #include <conio.h>
-#include <string.h>
+
 class  Book{
 
 int book_code,cost;
@@ -51,10 +51,10 @@ void search(char *book_name){
     if(strcmp(book_name,title)==0){
 cout<<"Here's the search result: \n";
 
-cout<<"BOOK CODE: "<<book_code<<endl;
-cout<<"TITLE: "<<title<<endl;
-cout<<"AUTHOR: "<<author<<endl;
-cout<<"PUBLISHER: "<<publisher<<endl;
+cout<<"BOOK CODE: "<<book_code;
+cout<<"TITLE: "<<title;
+cout<<"AUTHOR: "<<author;
+cout<<"PUBLISHER: "<<publisher;
 cout<<"PRICE: "<<cost;
 
     }
@@ -86,7 +86,7 @@ for (i = 0; i < 5; i++)
 }
 clrscr();
 cout<<"BOOK SEARCH\n";
-cout<<"Enter the name of the book: ";
+cout<<"Enter the name of the book: "
 cin>>bname;
 for (i = 0; i < 5; i++)
 {
