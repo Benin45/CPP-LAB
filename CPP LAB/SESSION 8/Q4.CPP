@@ -54,7 +54,7 @@ cout<<"COST: Rs "<<cost*quant<<endl;
 //SHOPPING AGAIN
 getch();
 mistake:
-cout<<"Do you wish to buy another item?";
+cout<<"Do you wish to buy another item? (Enter Y (for Yes) or N (For No) : ";
 cin>>ans;
 switch (ans)
 {
@@ -77,7 +77,8 @@ break;
 }
 
 
-    }
+}
+else{return repeat;}
 
 
 
