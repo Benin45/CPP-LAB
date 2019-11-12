@@ -69,22 +69,30 @@ void main(){
     clrscr();
     char bname[90];
 Book stuff[5];
+
+//INPUT
 cout<<"Enter the Book code, title, author, publisher and cost of 5 Books\n";
 for (int i = 0; i < 5; i++)
 {  cout<<"Book No."<<i+1<<endl;
    stuff[i].input_data();
     cout<<endl;
 }
-
+cout<<"Press Enter ";
+getch();
 clrscr();
 
+//OUTPUT
 cout<<"The details of 5 Books are :\n\n";
 for (i = 0; i < 5; i++)
 {  cout<<"Book No."<<i+1<<endl;
    stuff[i].output_data();
     cout<<endl;
 }
+cout<<"Press Enter ";
+getch();
 clrscr();
+
+//BOOK SEARCH
 cout<<"BOOK SEARCH\n";
 cout<<"Enter the name of the book: ";
 cin>>bname;
