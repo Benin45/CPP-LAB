@@ -35,8 +35,9 @@ cout<<"COST: "<<cost<<endl;
 
 }
 
-void shopping(char *item_name){
-
+int shopping(char *item_name){
+int repeat=0;
+char ans;
     if(strcmpi(item_name,prodname)==0){
 
 cout<<"How many of "<<prodname<<" do you need? : ";
@@ -49,6 +50,32 @@ cout<<"Here's shopping receipt: \n\n";
 cout<<"ITEM NAME: "<<prodname<<endl;
 cout<<"PRODUCT ID: "<<prod_id<<endl;
 cout<<"COST: Rs "<<cost*quant<<endl;
+
+//SHOPPING AGAIN
+getch();
+mistake:
+cout<<"Do you wish to buy another item?";
+cin>>ans;
+switch (ans)
+{
+case 'y':
+case 'Y':
+repeat++;
+return repeat;
+break;
+
+case 'n':
+case 'N':
+return repeat;
+break;
+
+default:
+cout<<"Please enter either Y or N ";
+getch();
+goto mistake;
+break;
+}
+
 
     }
 
@@ -87,12 +114,18 @@ getch();
 clrscr();
 
 //BILLING
+again:
 cout<<"SHOPPING CART\n";
 cout<<"Enter the name of the item you wish to buy: ";
 cin>>item;
+
 for (i = 0; i < 3; i++)
-{
-   stuff[i].shopping(item);
+{  
+   int repeat;
+
+   repeat=stuff[i].shopping(item);
+
+   if (repeat!=0){goto again;}
 
 }
 
