@@ -10,7 +10,7 @@ class  STUDENT{
 
 int StudentID;
 char STUDNAME[90];
-
+public:
 void getdata(){
 
 cin>>StudentID>>STUDNAME;
@@ -19,7 +19,7 @@ cin>>StudentID>>STUDNAME;
 
 void display(){
 
-cout<<StudentID<<STUDNAME;
+cout<<"ID: "<<StudentID<<endl<<"NAME : "<<STUDNAME<<"\n";
 
 }
 
@@ -34,15 +34,17 @@ for (int i = 0; i < 5; i++)
    EMP[i].getdata();
     cout<<endl;
 }
-cout<<"The IDs and names of 5 students are :\n";
 
-for (int i = 0; i < 5; i++)
+clrscr();
+cout<<"The IDs and names of 5 students are :\n\n";
+
+for (i = 0; i < 5; i++)
 {  cout<<"Student No."<<i+1<<endl;
    EMP[i].display();
     cout<<endl;
 }
 
-    
+
 
 
     getch();
