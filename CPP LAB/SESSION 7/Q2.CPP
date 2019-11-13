@@ -4,15 +4,18 @@ and methods.
 */
 #include <iostream.h>
 #include <conio.h>
+#include <string.h>
 #include<dos.h>
 
 class ACCOUNT{
-int AccountNumber,AccountHolder,Balance;
+int AccountNumber,Balance;
+char AccountHolder[90];
+
 public:
 
-ACCOUNT(int acc_num,int acc_hold,int bal){
+ACCOUNT(int acc_num,char acc_hold[90],int bal){
 AccountNumber=acc_num;
-AccountHolder=acc_hold;
+strcpy(AccountHolder,acc_hold);
 Balance=bal;
 
 }
@@ -21,23 +24,24 @@ int Credit = cred;
 int Debit = deb;
 Balance = Balance + Credit;
 Balance = Balance - Debit;
-delay(2000);
+delay(200*10);
 clrscr();
-cout<<endl<<"Your account number is "<<AccountNumber<<endl;
-cout<<endl<<"Your account holder is "<<AccountHolder<<endl;
+cout<<endl<<"Account Number  "<<AccountNumber<<endl;
+cout<<endl<<"Name : "<<AccountHolder<<endl;
 cout<<endl<<"Your Balance is Rs "<<Balance<<" since you credited Rs "<<Credit<<" and debited Rs "<<Debit<<endl;
 }
 
 };
 
 int main(){
-int AccountNumber,AccountHolder,Balance,Credit,Debit;
+int AccountNumber,Balance,Credit,Debit;
+char AccountHolder[90];
 	clrscr();
 
-	
+
 	cout<<"Enter your Account Number : ";
 	cin>>AccountNumber;
-	cout<<endl<<"Enter your Account Holder : ";
+	cout<<endl<<"Enter your name : ";
 	cin>>AccountHolder;
     cout<<endl<<"Enter your Balance : ";
 	cin>>Balance;
