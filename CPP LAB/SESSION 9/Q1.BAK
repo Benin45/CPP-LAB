@@ -12,7 +12,6 @@ class stock{
       protected:
       int price,total,item1;
       char item[50];
-      public:
       void accept()
       {
 	  cout<<"Enter item name:";
